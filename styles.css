@@ -1,0 +1,173 @@
+/* Variables de tema */
+:root{
+  --blue-dark: #06224d;      /* azul intenso superior */
+  --blue-light: #dce6f4;     /* azul clarito del fondo */
+  --card: #ffffff;
+  --muted: #555;
+  --accent: #2b9cff;
+  --accent-2: #1766b6;
+  --radius: 12px;
+  --max-width: 1100px;
+  --container-pad: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+
+/* Fondo general (AZUL CLARITO) */
+body{
+  margin:0;
+  background: var(--blue-light);
+  color:#0b0f19;
+  line-height:1.5;
+  font-size:16px;
+}
+
+/* FRANJA AZUL DE ARRIBA */
+.top-blue{
+  background: var(--blue-dark);
+  color:#eaf2ff;
+  padding-bottom:40px;
+}
+
+/* Contenedor */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding: var(--container-pad);
+}
+
+/* Header */
+.site-header{
+  padding-top:18px;
+  padding-bottom:18px;
+}
+
+/* NAV */
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:52px;
+  height:52px;
+  border-radius:12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  color:white;
+  font-size:18px;
+}
+
+.brand-text .name{font-weight:700}
+.brand-text .role{font-size:12px; color:#b4c4da}
+
+/* NAV links */
+.nav-links{
+  display:flex;
+  gap:12px;
+  list-style:none;
+}
+.nav-links a{
+  color:#c8d4e8;
+  text-decoration:none;
+  padding:8px 12px;
+}
+.nav-links a:hover{color:white}
+
+/* Hero */
+.hero{
+  display:flex;
+  gap:32px;
+  align-items:center;
+  padding:40px 0;
+}
+
+.hero-left h1{font-size:32px}
+.lead{color:#c8d4e8}
+
+/* Botones */
+.btn{
+  padding:10px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+}
+.btn.primary{
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:white;
+}
+.btn.ghost{
+  border:1px solid #fff3;
+  color:white;
+}
+
+/* Secciones blancas */
+.section h2{margin-bottom:12px}
+.text-muted{color:#555}
+
+/* Cards */
+.card{
+  background:white;
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Grid */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+/* Jobs */
+.job{margin-top:16px}
+.job-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.job-badge{
+  padding:6px 10px;
+  background:#e6f0ff;
+  color:var(--accent);
+  border-radius:8px;
+  font-weight:700;
+}
+
+/* Skills */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  list-style:none;
+}
+.skills li{
+  background:#f0f4ff;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+  color:#555;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{flex-direction:column}
+  .nav-links{display:none}
+  .card-grid{grid-template-columns:1fr}
+}
